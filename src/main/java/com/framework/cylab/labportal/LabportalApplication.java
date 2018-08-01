@@ -1,0 +1,12 @@
+package com.framework.cylab.labportal;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LabportalApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(LabportalApplication.class, args);
+    }
+}
