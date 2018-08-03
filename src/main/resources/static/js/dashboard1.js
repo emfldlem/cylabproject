@@ -90,6 +90,31 @@
   ]
      });
 
+     // ct-weather
+     var chart = new Chartist.Line('#ct-weather', {
+         labels: ['1', '2', '3', '4', '5', '6'],
+         series: [
+    [1, 0, 5, 3, 2, 2.5]
+
+  ]
+     }, {
+         showArea: true,
+         showPoint: false,
+
+         chartPadding: {
+             left: -20
+         },
+         axisX: {
+             showLabel: false,
+             showGrid: false
+         },
+         axisY: {
+             showLabel: false,
+             showGrid: true
+         },
+         fullWidth: true,
+
+     });
      //ct-visits
      new Chartist.Line('#ct-visits', {
          labels: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],

@@ -374,19 +374,19 @@
         -webkit-transition: -webkit-transform 0.3s;
         transition: transform 0.3s;
     }
-    li:first-child.tab-current~li:last-child::before {
+    li:first-child.tab-current ~ li:last-child::before {
         -webkit-transform: translate3d(-400%, 0, 0);
         transform: translate3d(-400%, 0, 0);
     }
-    li:nth-child(2).tab-current~li:last-child::before {
+    li:nth-child(2).tab-current ~ li:last-child::before {
         -webkit-transform: translate3d(-300%, 0, 0);
         transform: translate3d(-300%, 0, 0);
     }
-    li:nth-child(3).tab-current~li:last-child::before {
+    li:nth-child(3).tab-current ~ li:last-child::before {
         -webkit-transform: translate3d(-200%, 0, 0);
         transform: translate3d(-200%, 0, 0);
     }
-    li:nth-child(4).tab-current~li:last-child::before {
+    li:nth-child(4).tab-current ~ li:last-child::before {
         -webkit-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0);
     }
@@ -1507,8 +1507,8 @@ table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
         }
         td {
             vertical-align: middle;
-            white-space: nowrap;
             padding: 25px 10px;
+            white-space: nowrap;
             img {
                 width: 30px;
             }
@@ -1703,7 +1703,7 @@ table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
             transform: translateY(-50%) translateZ(0);
             -webkit-transform: translateY(-50%) translateZ(0);
             -ms-transform: translateY(-50%) translateZ(0);
-            >li {
+            > li {
                 list-style: none;
                 display: inline-block;
                 margin: 0 3px;
@@ -2072,7 +2072,7 @@ table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
     border-bottom: 1px solid @light;
 }
 
-.floating-labels select.form-control>option {
+.floating-labels select.form-control > option {
     font-size: 14px;
 }
 
@@ -2105,8 +2105,8 @@ table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
     -webkit-transition: 0.2s ease all;
 }
 
-.floating-labels .form-control:focus~label,
-.floating-labels .form-control:valid~label {
+.floating-labels .form-control:focus ~ label,
+.floating-labels .form-control:valid ~ label {
     top: -20px;
     font-size: 12px;
     color: @primary;
@@ -2138,8 +2138,8 @@ table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
     right: 50%;
 }
 
-.floating-labels .form-control:focus~.bar:before,
-.floating-labels .form-control:focus~.bar:after {
+.floating-labels .form-control:focus ~ .bar:before,
+.floating-labels .form-control:focus ~ .bar:after {
     width: 50%;
 }
 
@@ -2153,12 +2153,12 @@ table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
     opacity: 0.5;
 }
 
-.floating-labels .input-lg~label,
+.floating-labels .input-lg ~ label,
 .floating-labels .input-lg {
     font-size: 24px;
 }
 
-.floating-labels .input-sm~label,
+.floating-labels .input-sm ~ label,
 .floating-labels .input-sm {
     font-size: 16px;
 }
@@ -2178,18 +2178,18 @@ table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
     background: @danger;
 }
 
-.has-warning .form-control:focus~label,
-.has-warning .form-control:valid~label {
+.has-warning .form-control:focus ~ label,
+.has-warning .form-control:valid ~ label {
     color: @warning;
 }
 
-.has-success .form-control:focus~label,
-.has-success .form-control:valid~label {
+.has-success .form-control:focus ~ label,
+.has-success .form-control:valid ~ label {
     color: @success;
 }
 
-.has-error .form-control:focus~label,
-.has-error .form-control:valid~label {
+.has-error .form-control:focus ~ label,
+.has-error .form-control:valid ~ label {
     color: @danger;
 }
 

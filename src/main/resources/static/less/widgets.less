@@ -25,12 +25,12 @@
     -webkit-box-shadow: none;
     border: 0px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-    >li>ul {
+    > li > ul {
         padding: 0;
         margin: 0;
-        >li {
+        > li {
             list-style: none;
-            >a {
+            > a {
                 display: block;
                 padding: 8px 0px;
                 clear: both;
@@ -149,9 +149,6 @@
 /*Inbox Center*/
 
 .inbox-center {
-    td {
-        white-space: nowrap;
-    }
     .unread td {
         font-weight: 400;
     }
@@ -236,7 +233,7 @@
 
 .dropdown-tasks li a,
 .dropdown-alerts li a,
-.mailbox li>a {
+.mailbox li > a {
     padding: 15px 20px;
 }
 
@@ -324,7 +321,7 @@
     .inline-photos {
         margin-bottom: 30px;
     }
-    div>a {
+    div > a {
         color: @dark;
         font-weight: 400;
     }
@@ -718,7 +715,7 @@
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 1000;
 }
 
 .myadmin-alert-top {
@@ -966,7 +963,7 @@
                 }
             }
         }
-        .panel-heading+.panel-collapse {
+        .panel-heading + .panel-collapse {
             .panel-body {
                 border-top: none;
             }
@@ -1161,32 +1158,32 @@
     background-color: #eeeeee;
 }
 
-.timeline>li {
+.timeline > li {
     position: relative;
     margin-bottom: 20px;
 }
 
-.timeline>li:before,
-.timeline>li:after {
+.timeline > li:before,
+.timeline > li:after {
     content: " ";
     display: table;
 }
 
-.timeline>li:after {
+.timeline > li:after {
     clear: both;
 }
 
-.timeline>li:before,
-.timeline>li:after {
+.timeline > li:before,
+.timeline > li:after {
     content: " ";
     display: table;
 }
 
-.timeline>li:after {
+.timeline > li:after {
     clear: both;
 }
 
-.timeline>li>.timeline-panel {
+.timeline > li > .timeline-panel {
     float: left;
     position: relative;
     width: 46%;
@@ -1197,7 +1194,7 @@
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
 }
 
-.timeline>li>.timeline-panel:before {
+.timeline > li > .timeline-panel:before {
     content: " ";
     display: inline-block;
     position: absolute;
@@ -1209,7 +1206,7 @@
     border-left: 8px solid @border;
 }
 
-.timeline>li>.timeline-panel:after {
+.timeline > li > .timeline-panel:after {
     content: " ";
     display: inline-block;
     position: absolute;
@@ -1221,7 +1218,7 @@
     border-left: 7px solid #fff;
 }
 
-.timeline>li>.timeline-badge {
+.timeline > li > .timeline-badge {
     z-index: 100;
     position: absolute;
     top: 16px;
@@ -1238,18 +1235,18 @@
     background-color: @inverse;
 }
 
-.timeline>li.timeline-inverted>.timeline-panel {
+.timeline > li.timeline-inverted > .timeline-panel {
     float: right;
 }
 
-.timeline>li.timeline-inverted>.timeline-panel:before {
+.timeline > li.timeline-inverted > .timeline-panel:before {
     right: auto;
     left: -8px;
     border-right-width: 8px;
     border-left-width: 0;
 }
 
-.timeline>li.timeline-inverted>.timeline-panel:after {
+.timeline > li.timeline-inverted > .timeline-panel:after {
     right: auto;
     left: -7px;
     border-right-width: 7px;
@@ -1282,12 +1279,12 @@
     font-weight: 400;
 }
 
-.timeline-body>p,
-.timeline-body>ul {
+.timeline-body > p,
+.timeline-body > ul {
     margin-bottom: 0;
 }
 
-.timeline-body>p+p {
+.timeline-body > p + p {
     margin-top: 5px;
 }
 
@@ -1314,7 +1311,7 @@
     margin-bottom: 5px;
 }
 
-.pie-chart>span {
+.pie-chart > span {
     left: 0;
     margin-top: -2px;
     position: absolute;
@@ -1324,7 +1321,7 @@
     transform: translateY(-50%);
 }
 
-.chart>span>img {
+.chart > span > img {
     left: 0;
     margin-top: -2px;
     position: absolute;
@@ -1359,52 +1356,52 @@
 }
 
 .table-striped>tbody>tr:nth-of-type(odd),
-.table-hover>tbody>tr:hover,
-.table>thead>tr>td.active,
-.table>tbody>tr>td.active,
-.table>tfoot>tr>td.active,
-.table>thead>tr>th.active,
-.table>tbody>tr>th.active,
-.table>tfoot>tr>th.active,
-.table>thead>tr.active>td,
-.table>tbody>tr.active>td,
-.table>tfoot>tr.active>td,
-.table>thead>tr.active>th,
-.table>tbody>tr.active>th,
-.table>tfoot>tr.active>th {
+.table-hover > tbody > tr:hover,
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
     background-color: @extralight !important;
 }
 
-.table>thead>tr>th,
-.table>tbody>tr>th,
-.table>tfoot>tr>th,
-.table>thead>tr>td,
-.table>tbody>tr>td,
-.table>tfoot>tr>td,
-.table>thead>tr>th,
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td,
+.table > thead > tr > th,
 .table-bordered {
     border-top: 1px solid @light;
 }
 
-.table>tbody>tr>td,
-.table>tbody>tr>th,
-.table>tfoot>tr>td,
-.table>tfoot>tr>th,
-.table>thead>tr>td,
-.table>thead>tr>th {
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
     padding: 15px 8px;
 }
 
-.table-bordered>thead>tr>th,
-.table-bordered>tbody>tr>th,
-.table-bordered>tfoot>tr>th,
-.table-bordered>thead>tr>td,
-.table-bordered>tbody>tr>td,
-.table-bordered>tfoot>tr>td {
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
     border: 1px solid @light;
 }
 
-.table>thead>tr>th {
+.table > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 1px solid @light;
 }
@@ -2213,7 +2210,7 @@ table.focus-on {
     right: -240px;
     width: 240px;
     display: none;
-    z-index: 1200;
+    z-index: 1000;
     background: @white;
     top: 0px;
     height: 100%;
@@ -2566,7 +2563,7 @@ ul#themecolors {
         &:hover {
             background: @extralight;
         }
-        >div {
+        > div {
             width: 40px;
             height: 40px;
             margin-right: 5px;
@@ -2859,132 +2856,132 @@ ul.list-icons {
 }
 
 .tooltip-primary.tooltip .tooltip-inner,
-.tooltip-primary+.tooltip .tooltip-inner {
+.tooltip-primary + .tooltip .tooltip-inner {
     color: #ffffff;
     background-color: @primary;
 }
 
 .tooltip-primary.tooltip.top .tooltip-arrow,
-.tooltip-primary+.tooltip.top .tooltip-arrow {
+.tooltip-primary + .tooltip.top .tooltip-arrow {
     border-top-color: @primary;
 }
 
 .tooltip-primary.tooltip.right .tooltip-arrow,
-.tooltip-primary+.tooltip.right .tooltip-arrow {
+.tooltip-primary + .tooltip.right .tooltip-arrow {
     border-right-color: @primary;
 }
 
 .tooltip-primary.tooltip.bottom .tooltip-arrow,
-.tooltip-primary+.tooltip.bottom .tooltip-arrow {
+.tooltip-primary + .tooltip.bottom .tooltip-arrow {
     border-bottom-color: @primary;
 }
 
 .tooltip-primary.tooltip.left .tooltip-arrow,
-.tooltip-primary+.tooltip.left .tooltip-arrow {
+.tooltip-primary + .tooltip.left .tooltip-arrow {
     border-left-color: @primary;
 }
 
 .tooltip-success.tooltip .tooltip-inner,
-.tooltip-success+.tooltip .tooltip-inner {
+.tooltip-success + .tooltip .tooltip-inner {
     color: #ffffff;
     background-color: @success;
 }
 
 .tooltip-success.tooltip.top .tooltip-arrow,
-.tooltip-success+.tooltip.top .tooltip-arrow {
+.tooltip-success + .tooltip.top .tooltip-arrow {
     border-top-color: @success;
 }
 
 .tooltip-success.tooltip.right .tooltip-arrow,
-.tooltip-success+.tooltip.right .tooltip-arrow {
+.tooltip-success + .tooltip.right .tooltip-arrow {
     border-right-color: @success;
 }
 
 .tooltip-success.tooltip.bottom .tooltip-arrow,
-.tooltip-success+.tooltip.bottom .tooltip-arrow {
+.tooltip-success + .tooltip.bottom .tooltip-arrow {
     border-bottom-color: @success;
 }
 
 .tooltip-success.tooltip.left .tooltip-arrow,
-.tooltip-success+.tooltip.left .tooltip-arrow {
+.tooltip-success + .tooltip.left .tooltip-arrow {
     border-left-color: @success;
 }
 
 .tooltip-warning.tooltip .tooltip-inner,
-.tooltip-warning+.tooltip .tooltip-inner {
+.tooltip-warning + .tooltip .tooltip-inner {
     color: #ffffff;
     background-color: @warning;
 }
 
 .tooltip-warning.tooltip.top .tooltip-arrow,
-.tooltip-warning+.tooltip.top .tooltip-arrow {
+.tooltip-warning + .tooltip.top .tooltip-arrow {
     border-top-color: @warning;
 }
 
 .tooltip-warning.tooltip.right .tooltip-arrow,
-.tooltip-warning+.tooltip.right .tooltip-arrow {
+.tooltip-warning + .tooltip.right .tooltip-arrow {
     border-right-color: @warning;
 }
 
 .tooltip-warning.tooltip.bottom .tooltip-arrow,
-.tooltip-warning+.tooltip.bottom .tooltip-arrow {
+.tooltip-warning + .tooltip.bottom .tooltip-arrow {
     border-bottom-color: @warning;
 }
 
 .tooltip-warning.tooltip.left .tooltip-arrow,
-.tooltip-warning+.tooltip.left .tooltip-arrow {
+.tooltip-warning + .tooltip.left .tooltip-arrow {
     border-left-color: @warning;
 }
 
 .tooltip-info.tooltip .tooltip-inner,
-.tooltip-info+.tooltip .tooltip-inner {
+.tooltip-info + .tooltip .tooltip-inner {
     color: #ffffff;
     background-color: @info;
 }
 
 .tooltip-info.tooltip.top .tooltip-arrow,
-.tooltip-info+.tooltip.top .tooltip-arrow {
+.tooltip-info + .tooltip.top .tooltip-arrow {
     border-top-color: @info;
 }
 
 .tooltip-info.tooltip.right .tooltip-arrow,
-.tooltip-info+.tooltip.right .tooltip-arrow {
+.tooltip-info + .tooltip.right .tooltip-arrow {
     border-right-color: @info;
 }
 
 .tooltip-info.tooltip.bottom .tooltip-arrow,
-.tooltip-info+tooltip.bottom .tooltip-arrow {
+.tooltip-info + tooltip.bottom .tooltip-arrow {
     border-bottom-color: @info;
 }
 
 .tooltip-info.tooltip.left .tooltip-arrow,
-.tooltip-info+.tooltip.left .tooltip-arrow {
+.tooltip-info + .tooltip.left .tooltip-arrow {
     border-left-color: @info;
 }
 
 .tooltip-danger.tooltip .tooltip-inner,
-.tooltip-danger+.tooltip .tooltip-inner {
+.tooltip-danger + .tooltip .tooltip-inner {
     color: #ffffff;
     background-color: @danger;
 }
 
 .tooltip-danger.tooltip.top .tooltip-arrow,
-.tooltip-danger+.tooltip.top .tooltip-arrow {
+.tooltip-danger + .tooltip.top .tooltip-arrow {
     border-top-color: @danger;
 }
 
 .tooltip-danger.tooltip.right .tooltip-arrow,
-.tooltip-danger+.tooltip.right .tooltip-arrow {
+.tooltip-danger + .tooltip.right .tooltip-arrow {
     border-right-color: @danger;
 }
 
 .tooltip-danger.tooltip.bottom .tooltip-arrow,
-.tooltip-danger+.tooltip.bottom .tooltip-arrow {
+.tooltip-danger + .tooltip.bottom .tooltip-arrow {
     border-bottom-color: @danger;
 }
 
 .tooltip-danger.tooltip.left .tooltip-arrow,
-.tooltip-danger+.tooltip.left .tooltip-arrow {
+.tooltip-danger + .tooltip.left .tooltip-arrow {
     border-left-color: @danger;
 }
 
@@ -3009,73 +3006,73 @@ ul.list-icons {
     border-radius: 0px;
 }
 
-.popover-primary+.popover .popover-title {
+.popover-primary + .popover .popover-title {
     color: @white;
     background-color: @primary;
     border-color: @primary;
 }
 
-.popover-primary+.popover.bottom .arrow {
+.popover-primary + .popover.bottom .arrow {
     border-bottom-color: @primary;
 }
 
-.popover-primary+.popover.bottom .arrow:after {
+.popover-primary + .popover.bottom .arrow:after {
     border-bottom-color: @primary;
 }
 
-.popover-success+.popover .popover-title {
+.popover-success + .popover .popover-title {
     color: @white;
     background-color: @success;
     border-color: @success;
 }
 
-.popover-success+.popover.bottom .arrow {
+.popover-success + .popover.bottom .arrow {
     border-bottom-color: @success;
 }
 
-.popover-success+.popover.bottom .arrow:after {
+.popover-success + .popover.bottom .arrow:after {
     border-bottom-color: @success;
 }
 
-.popover-info+.popover .popover-title {
+.popover-info + .popover .popover-title {
     color: @white;
     background-color: @info;
     border-color: @info;
 }
 
-.popover-info+.popover.bottom .arrow {
+.popover-info + .popover.bottom .arrow {
     border-bottom-color: @info;
 }
 
-.popover-info+.popover.bottom .arrow:after {
+.popover-info + .popover.bottom .arrow:after {
     border-bottom-color: @info;
 }
 
-.popover-warning+.popover .popover-title {
+.popover-warning + .popover .popover-title {
     color: @white;
     background-color: @warning;
     border-color: @warning;
 }
 
-.popover-warning+.popover.bottom .arrow {
+.popover-warning + .popover.bottom .arrow {
     border-bottom-color: @warning;
 }
 
-.popover-warning+.popover.bottom .arrow:after {
+.popover-warning + .popover.bottom .arrow:after {
     border-bottom-color: @warning;
 }
 
-.popover-danger+.popover .popover-title {
+.popover-danger + .popover .popover-title {
     color: @white;
     background-color: @danger;
     border-color: @danger;
 }
 
-.popover-danger+.popover.bottom .arrow {
+.popover-danger + .popover.bottom .arrow {
     border-bottom-color: @danger;
 }
 
-.popover-danger+.popover.bottom .arrow:after {
+.popover-danger + .popover.bottom .arrow:after {
     border-bottom-color: @danger;
 }
 
@@ -3088,7 +3085,7 @@ ul.list-icons {
     vertical-align: middle;
 }
 
-.btn-file>input {
+.btn-file > input {
     position: absolute;
     top: 0;
     right: 0;
@@ -3125,7 +3122,7 @@ ul.list-icons {
     text-align: center;
 }
 
-.fileinput .thumbnail>img {
+.fileinput .thumbnail > img {
     max-height: 100%;
 }
 
@@ -3156,12 +3153,12 @@ ul.list-icons {
     display: table;
 }
 
-.fileinput.input-group>* {
+.fileinput.input-group > * {
     position: relative;
     z-index: 2;
 }
 
-.fileinput.input-group>.btn-file {
+.fileinput.input-group > .btn-file {
     z-index: 1;
 }
 
@@ -3247,7 +3244,7 @@ ul.list-icons {
 
 /*Datatable*/
 
-.editable-table+input.error {
+.editable-table + input.error {
     border: 1px solid #danger;
     outline: 0;
     outline-offset: 0
@@ -3255,7 +3252,7 @@ ul.list-icons {
 
 .editable-table+input,
 .editable-table+input:focus,
-#editable-datatable_wrapper+input:focus {
+#editable-datatable_wrapper + input:focus {
     border: 1px solid @info!important;
     outline: 0!important;
     outline-offset: 0!important
@@ -3300,7 +3297,7 @@ ul.list-icons {
     width: 100%
 }
 
-.wizard-steps>li {
+.wizard-steps > li {
     display: table-cell;
     padding: 10px 20px;
     background: @extralight;
@@ -3323,8 +3320,8 @@ ul.list-icons {
     margin-bottom: 30px;
 }
 
-.wizard-steps>li.current,
-.wizard-steps>li.done {
+.wizard-steps > li.current,
+.wizard-steps > li.done {
     background: @info;
     color: @white;
     span {
@@ -3336,11 +3333,11 @@ ul.list-icons {
     }
 }
 
-.wizard-steps>li.done {
+.wizard-steps > li.done {
     background: @success;
 }
 
-.wizard-steps>li.error {
+.wizard-steps > li.error {
     background: @danger;
 }
 
@@ -3367,8 +3364,8 @@ ul.list-icons {
 #diagram {
     margin: 0 auto;
     width: 250px;
-    padding-top: 30px;
-    height: 271px;
+    padding-top: 60px;
+    height: 341px;
     circle {
         fill: @white;
     }
@@ -3441,7 +3438,7 @@ ul.expense-box {
 ul.side-icon-text {
     margin: 0px;
     padding: 0px;
-    >li {
+    > li {
         list-style: none;
         display: inline-block;
         margin-right: 10px;
@@ -4104,7 +4101,7 @@ ul.wallet-list {
     .form-control {
         transition: 0s;
     }
-    .form-control:focus+.input-group-addon {
+    .form-control:focus + .input-group-addon {
         border-color: @bodytext;
         color: @bodytext;
     }

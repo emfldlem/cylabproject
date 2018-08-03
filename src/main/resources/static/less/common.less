@@ -69,10 +69,6 @@ h5 {
     display: block;
 }
 
-.dl {
-    display: inline-block;
-}
-
 .light_op_text {
     color: rgba(255, 255, 255, 0.5);
 }
@@ -380,10 +376,9 @@ hr {
     vertical-align: middle;
 }
 
-.mdi {
-    font-size: 17px;
+.mdi{
+    font-size:17px;
 }
-
 .bx-shadow {
     -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
@@ -642,11 +637,9 @@ hr {
 .bg-danger {
     background-color: @danger !important;
 }
-
 .bg-theme-alt {
     background-color: @themealt !important;
 }
-
 .bg-theme {
     background-color: @themecolor !important;
 }
@@ -674,7 +667,6 @@ hr {
 .bg-extralight {
     background-color: @extralight !important;
 }
-
 
 /* Labels */
 
@@ -753,7 +745,7 @@ hr {
     margin-top: 0px;
 }
 
-.dropdown-menu>li>a {
+.dropdown-menu > li > a {
     padding: 9px 20px;
 }
 
@@ -777,8 +769,8 @@ label {
 .form-control {
     background-color: #ffffff;
     border: 1px solid @light;
-    border-radius: @radius;
-    box-shadow: 4px;
+    border-radius: 4px;
+    box-shadow: none;
     color: #565656;
     height: 38px;
     max-width: 100%;
@@ -825,6 +817,7 @@ label {
 }
 
 .form-horizontal .form-group {
+    
     margin-bottom: 25px;
 }
 
@@ -876,7 +869,7 @@ pre {
     border-radius: @radius;
 }
 
-.nav-tabs>li>a {
+.nav-tabs > li > a {
     border-radius: @radius;
     color: @dark;
     &:hover,
@@ -944,27 +937,27 @@ pre {
 
 /* Pagination/ Pager */
 
-.pagination>li:first-child>a,
-.pagination>li:first-child>span {
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
     border-bottom-left-radius: @radius;
     border-top-left-radius: @radius;
 }
 
-.pagination>li:last-child>a,
-.pagination>li:last-child>span {
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
     border-bottom-right-radius: @radius;
     border-top-right-radius: @radius;
 }
 
-.pagination>li>a,
-.pagination>li>span {
+.pagination > li > a,
+.pagination > li > span {
     color: @dark;
 }
 
-.pagination>li>a:hover,
-.pagination>li>span:hover,
-.pagination>li>a:focus,
-.pagination>li>span:focus {
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
     background-color: @light;
 }
 
@@ -984,18 +977,18 @@ pre {
     border-radius: @radius;
 }
 
-.pagination>.active>a,
-.pagination>.active>span,
-.pagination>.active>a:hover,
-.pagination>.active>span:hover,
-.pagination>.active>a:focus,
-.pagination>.active>span:focus {
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
     background-color: @themecolor;
     border-color: @themecolor;
 }
 
-.pager li>a,
-.pager li>span {
+.pager li > a,
+.pager li > span {
     -moz-border-radius: @radius;
     -webkit-border-radius: @radius;
     border-radius: @radius;
@@ -1034,7 +1027,7 @@ pre {
 .footer {
     bottom: 0;
     color: #58666e;
-    left: 240px;
+    left: 0px;
     padding: 20px 30px;
     position: absolute;
     right: 0;
@@ -1079,7 +1072,7 @@ pre {
     /*background:@themecolor;*/
     height: 60px;
     float: @lft;
-    padding-left: 10px;
+    padding-left:10px;
     width: auto;
     line-height: 59px;
     text-align: center;
@@ -1090,7 +1083,7 @@ pre {
 }
 
 .top-left-part {
-    width: 240px;
+    width: 220px;
     float: left;
     border-right: 1px solid rgba(0, 0, 0, 0.08);
     a {
@@ -1125,11 +1118,11 @@ pre {
     top: 15px;
 }
 
-.navbar-top-links>li {
+.navbar-top-links > li {
     float: left;
 }
 
-.navbar-top-links>li>a {
+.navbar-top-links > li > a {
     color: @white;
     padding: 0 14px;
     line-height: 60px;
@@ -1142,9 +1135,9 @@ pre {
     }
 }
 
-.nav .open>a,
-.nav .open>a:focus,
-.nav .open>a:hover {
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
     background: rgba(255, 255, 255, 0.2)
 }
 
@@ -1183,24 +1176,24 @@ pre {
     right: 0;
     left: auto;
     width: 280px;
-    .dw-user-box {
+    .dw-user-box{
         padding: 15px;
-        .u-img {
+        .u-img{
             width: 80px;
             display: inline-block;
             vertical-align: top;
-            img {
+            img{
                 width: 100%;
                 border-radius: 5px;
             }
         }
-        .u-text {
+        .u-text{
             display: inline-block;
             padding-left: 10px;
-            h4 {
+            h4{
                 margin: 0px;
             }
-            p {
+            p{
                 margin-bottom: 3px;
             }
         }
@@ -1559,9 +1552,9 @@ pre {
 .btn-primary.focus:active,
 .btn-primary:active:focus,
 .btn-primary:active:hover,
-.open>.dropdown-toggle.btn-primary.focus,
-.open>.dropdown-toggle.btn-primary:focus,
-.open>.dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary.focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.open > .dropdown-toggle.btn-primary:hover,
 .btn-primary.focus,
 .btn-primary:focus {
     background-color: @primary ;
@@ -1574,9 +1567,9 @@ pre {
 .btn-success.focus:active,
 .btn-success:active:focus,
 .btn-success:active:hover,
-.open>.dropdown-toggle.btn-success.focus,
-.open>.dropdown-toggle.btn-success:focus,
-.open>.dropdown-toggle.btn-success:hover,
+.open > .dropdown-toggle.btn-success.focus,
+.open > .dropdown-toggle.btn-success:focus,
+.open > .dropdown-toggle.btn-success:hover,
 .btn-success.focus,
 .btn-success:focus {
     background-color: @success;
@@ -1589,9 +1582,9 @@ pre {
 .btn-info.focus:active,
 .btn-info:active:focus,
 .btn-info:active:hover,
-.open>.dropdown-toggle.btn-info.focus,
-.open>.dropdown-toggle.btn-info:focus,
-.open>.dropdown-toggle.btn-info:hover,
+.open > .dropdown-toggle.btn-info.focus,
+.open > .dropdown-toggle.btn-info:focus,
+.open > .dropdown-toggle.btn-info:hover,
 .btn-info.focus,
 .btn-info:focus {
     background-color: @info;
@@ -1604,9 +1597,9 @@ pre {
 .btn-warning.focus:active,
 .btn-warning:active:focus,
 .btn-warning:active:hover,
-.open>.dropdown-toggle.btn-warning.focus,
-.open>.dropdown-toggle.btn-warning:focus,
-.open>.dropdown-toggle.btn-warning:hover,
+.open > .dropdown-toggle.btn-warning.focus,
+.open > .dropdown-toggle.btn-warning:focus,
+.open > .dropdown-toggle.btn-warning:hover,
 .btn-warning.focus,
 .btn-warning:focus {
     background-color: @warning;
@@ -1619,9 +1612,9 @@ pre {
 .btn-danger.focus:active,
 .btn-danger:active:focus,
 .btn-danger:active:hover,
-.open>.dropdown-toggle.btn-danger.focus,
-.open>.dropdown-toggle.btn-danger:focus,
-.open>.dropdown-toggle.btn-danger:hover,
+.open > .dropdown-toggle.btn-danger.focus,
+.open > .dropdown-toggle.btn-danger:focus,
+.open > .dropdown-toggle.btn-danger:hover,
 .btn-danger.focus,
 .btn-danger:focus {
     background-color: @danger;
@@ -1637,7 +1630,7 @@ pre {
 .btn-inverse:active,
 .btn-inverse:focus,
 .btn-inverse:hover,
-.open>.dropdown-toggle.btn-inverse {
+.open > .dropdown-toggle.btn-inverse {
     background-color: @inverse;
     border: 1px solid @inverse;
     color: @white;
@@ -1958,7 +1951,6 @@ table.dataTable thead .sorting:after {
         }
     }
 }
-
 .panel-themecolor,
 .panel-theme {
     border-color: @themecolor;
@@ -1980,7 +1972,6 @@ table.dataTable thead .sorting:after {
         }
     }
 }
-
 .panel-white,
 .panel-default {
     border-color: @border;
@@ -2342,7 +2333,6 @@ table.dataTable thead .sorting:after {
     display: block;
 }
 
-
 /*common ul Listing*/
 
 .common-list {
@@ -2361,7 +2351,6 @@ table.dataTable thead .sorting:after {
         }
     }
 }
-
 
 /* =============
    Checkbox and Radios
@@ -2408,24 +2397,24 @@ table.dataTable thead .sorting:after {
         opacity: 0;
         z-index: 1;
         outline: none !important;
-        &:disabled+label {
+        &:disabled + label {
             opacity: 0.65;
         }
     }
-    input[type="checkbox"]:focus+label {
+    input[type="checkbox"]:focus + label {
         &::before {
             outline-offset: -2px;
             outline: none;
             outline: thin dotted;
         }
     }
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::after {
             content: "\f00c";
             font-family: 'FontAwesome';
         }
     }
-    input[type="checkbox"]:disabled+label {
+    input[type="checkbox"]:disabled + label {
         &::before {
             background-color: @light;
             cursor: not-allowed;
@@ -2452,7 +2441,7 @@ table.dataTable thead .sorting:after {
 }
 
 .checkbox-primary {
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::before {
             background-color: @primary;
             border-color: @primary;
@@ -2464,7 +2453,7 @@ table.dataTable thead .sorting:after {
 }
 
 .checkbox-danger {
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::before {
             background-color: @danger;
             border-color: @danger;
@@ -2476,7 +2465,7 @@ table.dataTable thead .sorting:after {
 }
 
 .checkbox-info {
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::before {
             background-color: @info;
             border-color: @info;
@@ -2488,7 +2477,7 @@ table.dataTable thead .sorting:after {
 }
 
 .checkbox-warning {
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::before {
             background-color: @warning;
             border-color: @warning;
@@ -2500,7 +2489,7 @@ table.dataTable thead .sorting:after {
 }
 
 .checkbox-success {
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::before {
             background-color: @success;
             border-color: @success;
@@ -2512,7 +2501,7 @@ table.dataTable thead .sorting:after {
 }
 
 .checkbox-purple {
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::before {
             background-color: @purple;
             border-color: @purple;
@@ -2524,7 +2513,7 @@ table.dataTable thead .sorting:after {
 }
 
 .checkbox-red {
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::before {
             background-color: @danger;
             border-color: @danger;
@@ -2536,7 +2525,7 @@ table.dataTable thead .sorting:after {
 }
 
 .checkbox-inverse {
-    input[type="checkbox"]:checked+label {
+    input[type="checkbox"]:checked + label {
         &::before {
             background-color: @inverse;
             border-color: @inverse;
@@ -2599,18 +2588,18 @@ table.dataTable thead .sorting:after {
         opacity: 0;
         z-index: 1;
         outline: none !important;
-        &:disabled+label {
+        &:disabled + label {
             opacity: 0.65;
         }
     }
-    input[type="radio"]:focus+label {
+    input[type="radio"]:focus + label {
         &::before {
             outline-offset: -2px;
             outline: 5px auto -webkit-focus-ring-color;
             outline: thin dotted;
         }
     }
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         &::after {
             -ms-transform: scale(1, 1);
             -o-transform: scale(1, 1);
@@ -2618,7 +2607,7 @@ table.dataTable thead .sorting:after {
             transform: scale(1, 1);
         }
     }
-    input[type="radio"]:disabled+label {
+    input[type="radio"]:disabled + label {
         &::before {
             cursor: not-allowed;
         }
@@ -2636,12 +2625,12 @@ table.dataTable thead .sorting:after {
 }
 
 .radio-primary {
-    input[type="radio"]+label {
+    input[type="radio"] + label {
         &::after {
             background-color: @primary;
         }
     }
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         &::before {
             border-color: @primary;
         }
@@ -2652,12 +2641,12 @@ table.dataTable thead .sorting:after {
 }
 
 .radio-danger {
-    input[type="radio"]+label {
+    input[type="radio"] + label {
         &::after {
             background-color: @danger;
         }
     }
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         &::before {
             border-color: @danger;
         }
@@ -2668,12 +2657,12 @@ table.dataTable thead .sorting:after {
 }
 
 .radio-info {
-    input[type="radio"]+label {
+    input[type="radio"] + label {
         &::after {
             background-color: @info;
         }
     }
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         &::before {
             border-color: @info;
         }
@@ -2684,12 +2673,12 @@ table.dataTable thead .sorting:after {
 }
 
 .radio-warning {
-    input[type="radio"]+label {
+    input[type="radio"] + label {
         &::after {
             background-color: @warning;
         }
     }
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         &::before {
             border-color: @warning;
         }
@@ -2700,12 +2689,12 @@ table.dataTable thead .sorting:after {
 }
 
 .radio-success {
-    input[type="radio"]+label {
+    input[type="radio"] + label {
         &::after {
             background-color: @success;
         }
     }
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         &::before {
             border-color: @success;
         }
@@ -2716,12 +2705,12 @@ table.dataTable thead .sorting:after {
 }
 
 .radio-purple {
-    input[type="radio"]+label {
+    input[type="radio"] + label {
         &::after {
             background-color: @purple;
         }
     }
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         &::before {
             border-color: @purple;
         }
@@ -2732,12 +2721,12 @@ table.dataTable thead .sorting:after {
 }
 
 .radio-red {
-    input[type="radio"]+label {
+    input[type="radio"] + label {
         &::after {
             background-color: @danger;
         }
     }
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         &::before {
             border-color: @danger;
         }
