@@ -15,7 +15,7 @@ public class Customer implements Serializable {
     private static final long serialVersionUID = -7291882322359393649L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")

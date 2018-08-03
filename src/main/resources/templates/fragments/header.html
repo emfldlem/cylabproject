@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
     <title>Ample Admin Template - The Ultimate Multipurpose admin template</title>
     <!-- Bootstrap Core CSS -->
@@ -35,6 +38,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
     <link rel="icon" type="image/png" sizes="16x16" href="/plugins/images/favicon.png">
     <title>Ample Admin Template - The Ultimate Multipurpose admin template</title>
     <!-- Bootstrap Core CSS -->
@@ -175,12 +181,20 @@
                     <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a></form>
             </li>
             <li class="dropdown">
-                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="javascript:void(0)">
-                    <img src="../plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle">
                     <span sec:authorize="isAuthenticated()">
-                        <b class="hidden-xs" sec:authentication="name">이름</b><span class="caret"></span>
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="javascript:void(0)">
+                            <img src="../plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle">
+                            <b class="hidden-xs" sec:authentication="name">이름</b><span class="caret"></span>
+                        </a>
+                        <form th:action="@{/logout}" method="post">
+                            <button type="submit" class="btn btn-info">로그 아웃</button>
+                        </form>
                     </span>
-                </a>
+                    <span sec:authorize="isAnonymous()">
+                        <a href="/login" >
+                            <button type="button" class="btn btn-danger">로그인</button>
+                        </a>
+                    </span>
                 <ul class="dropdown-menu dropdown-user animated flipInY">
                     <li>
                         <div class="dw-user-box">

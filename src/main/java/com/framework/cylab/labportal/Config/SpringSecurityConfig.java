@@ -37,17 +37,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/",
+        http    .authorizeRequests()
+                /*.antMatchers("/",
                         "/index",
                         "/join/**",
-                        "/board/**"
+                        "/board/**",
+                        "/joinInsert"
                         )
-                .permitAll()
+                .permitAll()*/
                 .antMatchers("/admin/**").hasAnyRole("ADMIN")
                 .antMatchers("/user/**").hasAnyRole("USER")
-                .anyRequest().authenticated()
+                /*.anyRequest().authenticated()*/
                 .and()
                 .formLogin()
                 .loginPage("/login")
@@ -77,7 +77,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(loginService).passwordEncoder(passwordEncoder());
-        String aa = "aa";
     }
 
 
