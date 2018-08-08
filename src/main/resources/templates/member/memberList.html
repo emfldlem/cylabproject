@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header-css">
+</head>
+
+<body class="fix-header">
+
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+</div>
+
+<div id="wrapper">
+    <nav th:replace="fragments/header :: header-top"></nav>
+    <div th:replace="fragments/header :: header-menu"></div>
+
+
+    <!--<div id="page-wrapper">
+        <div class="table-responsive">
+            <div id="myTable_wrapper" class="dataTables_wrapper no-footer">
+                <div class="dataTables_length" id="myTable_length"><label>Show <select name="myTable_length" aria-controls="myTable" class="">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select> entries</label></div>
+                <div id="myTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="myTable"></label></div>
+                <table id="myTable" class="table table-striped dataTable no-footer" role="grid" aria-describedby="myTable_info">
+                    <thead>
+                    <tr role="row">
+                        <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 170px;">아이디</th>
+                        <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 256px;">이메일</th>
+                        <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 128px;">권한</th>
+                        <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 68px;">등록일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="member : ${memberList}">
+                        <td th:text="${member.memberId}">아이디</td>
+                        <td th:text="${member.memberEmail}">이메일</td>
+                        <td th:text="${member.memberAuth}">권한</td>
+                        <td th:text="${#dates.format(member.regDt, 'yyyy-MM-dd')}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="dataTables_info" id="myTable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+                <div class="dataTables_paginate paging_simple_numbers" id="myTable_paginate">
+                    <a class="paginate_button previous disabled" aria-controls="myTable" data-dt-idx="0" tabindex="0" id="myTable_previous">Previous</a>
+                    <span>
+                        <a class="paginate_button current" aria-controls="myTable" data-dt-idx="1" tabindex="0">1</a>
+                        <a class="paginate_button " aria-controls="myTable" data-dt-idx="2" tabindex="0">2</a>
+                        <a class="paginate_button " aria-controls="myTable" data-dt-idx="3" tabindex="0">3</a>
+                        <a class="paginate_button " aria-controls="myTable" data-dt-idx="4" tabindex="0">4</a>
+                        <a class="paginate_button " aria-controls="myTable" data-dt-idx="5" tabindex="0">5</a>
+                        <a class="paginate_button " aria-controls="myTable" data-dt-idx="6" tabindex="0">6</a>
+                    </span>
+                    <a class="paginate_button next" aria-controls="myTable" data-dt-idx="7" tabindex="0" id="myTable_next">Next</a>
+                </div>
+            </div>
+        </div>
+
+
+        &lt;!&ndash; /.container-fluid &ndash;&gt;
+        <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by themedesigner.in</footer>
+    </div>-->
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th th:text="아이디" />
+            <th th:text="이메일" />
+            <th th:text="권한" />
+            <th th:text="등록일" />
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="member, iStat : ${memberList.content}"
+            th:style="${iStat.odd} ? 'font-weight: bold;'"
+            th:alt-title="${iStat.even} ? 'even' : 'odd'">
+            <td th:text="${member.memberId}" />
+            <td th:text="${member.memberEmail}" />
+            <td th:text="${member.memberAuth}" />
+            <td th:text="${#dates.format(member.regDt, 'yyyy-MM-dd')}"/>
+        </tr>
+        </tbody>
+    </table>
+    <div th:if="${memberList.totalPages > 0}" class="pagination"
+         th:each="pageNumber : ${pageNumbers}">
+        <a th:href="@{/member/listmember(size=${memberList.size}, page=${pageNumber})}"
+           th:text="${pageNumber}"
+           th:class="${pageNumber==memberList.number + 1} ? active"></a>
+    </div>
+
+
+</div>
+
+<div th:replace="fragments/footer :: footer-script"></div>
+
+</body>
+</html>

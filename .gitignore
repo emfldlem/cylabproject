@@ -19,6 +19,7 @@ mvnw
 mvnw.cmd
 *.mvn
 .mvn/*
+*.log
 
 
 ### NetBeans ###
