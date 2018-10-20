@@ -8,20 +8,38 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Date;
 
 @Controller
+@RequestMapping(value = "/join")
 public class JoinController {
 
     @Autowired
     JoinRepository joinRepository;
 
-    @GetMapping("/join")
-    public String join() {
-        return "join/join";
+    @GetMapping("")
+    public String join_step1() {
+        return "join/join_step1";
     }
+
+    @GetMapping("/joinstep2")
+    public String join_step2() {
+        return "join/join_step2";
+    }
+
+    @GetMapping("/joinstep3")
+    public String join_step3() {
+        return "join/join_step3";
+    }
+
+    @GetMapping("/joinstep4")
+    public String join_step4() {
+        return "join/join_step4";
+    }
+
 
 
     @PostMapping("/joinInsert")

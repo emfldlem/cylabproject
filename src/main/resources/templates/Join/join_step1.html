@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head th:replace="fragments/header :: header-css">
+</head>
+
+<body>
+<div class="join-header">
+    <h1><img th:src="@{/img/login_logo.png}" title="Navie Beauty Studio"></h1>
+</div>
+<div class="join-title">
+    <h2>기업 회원 가입</h2>
+</div>
+<div class="join-wrap">
+    <div class="join-step">
+        <ul>
+            <li class="active"><strong>Step1</strong><span>기업 구분</span></li>
+            <li><strong>Step2</strong><span>약관 동의</span></li>
+            <li><strong>Step3</strong><span>정보 입력</span></li>
+            <li><strong>Step4</strong><span>완료</span></li>
+        </ul>
+    </div>
+    <form class="join-form step1">
+        <ul>
+            <li>
+                <input type="radio" id="com_type_1" name="com_type_group" hidden>
+                <label for="com_type_1">
+                    <i class="i-bulb"></i>
+                    <h3>화장품 의뢰 기업</h3>
+                    <p>화장품 개발을 의뢰하고 싶은 기업</p>
+                </label>
+            </li>
+            <li>
+                <input type="radio" id="com_type_2" name="com_type_group" hidden>
+                <label for="com_type_2">
+                    <i class="i-lab2"></i>
+                    <h3>화장품 제조 기업</h3>
+                    <p>화장품 개발 의뢰를 받아 제조하는 기업</p>
+                </label>
+            </li>
+            <li>
+                <input type="radio" id="com_type_3" name="com_type_group" hidden>
+                <label for="com_type_3">
+                    <i class="i-truck2"></i>
+                    <h3>부자재 납품 기업</h3>
+                    <p>화장품 부자재를 납품하는 기업</p>
+                </label>
+            </li>
+        </ul>
+    </form>
+    <div class="join-btns">
+        <a th:href="@{/join/joinstep2}" class="btn active">N E X T</a>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer-script"/>
+<script>
+    $(document).ready(function () {
+        $('.input-item input').each(function () {
+            $(this).on('blur', function () {
+                if ($(this).val().trim() != "") {
+                    $(this).addClass('has-val');
+                }
+                else {
+                    $(this).removeClass('has-val');
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

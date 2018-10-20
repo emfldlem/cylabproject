@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head th:replace="fragments/header :: header-css">
+</head>
+
+<body>
+<div class="join-header">
+    <h1><img th:src="@{/img/login_logo.png}" title="Navie Beauty Studio"></h1>
+</div>
+<div class="join-title">
+    <h2>기업 회원 가입</h2>
+</div>
+<div class="join-wrap">
+    <div class="join-step">
+        <ul>
+            <li class="complate"><strong>Step1</strong><span>기업 구분</span></li>
+            <li class="complate"><strong>Step2</strong><span>약관 동의</span></li>
+            <li class="complate"><strong>Step3</strong><span>정보 입력</span></li>
+            <li class="active"><strong>Step4</strong><span>완료</span></li>
+        </ul>
+    </div>
+    <div class="join-form step4">
+        <h3><i class="i-checkmark"></i>축하합니다. 회원가입이 완료되었습니다.</h3>
+    </div>
+    <div class="join-btns">
+        <a th:href="@{/login}" class="btn active">로그인</a>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer-script"/>
+
+</body>
+</html>

@@ -19,7 +19,7 @@ public class LoginService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return
-                Optional.ofNullable(loginRepository.findByName(username))
+                Optional.ofNullable(loginRepository.findByMemberId(username))
                 .filter(m -> m!= null)
                 .map(m->new SecurityCustomer(m)).get();
     }
